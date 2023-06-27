@@ -13,7 +13,7 @@
 from tkinter import *
 from tkinter.filedialog import askopenfilename
 import os, sys
-PSSE_PATH = r'C:\Program Files\PTI\PSSE35\35.3\PSSBIN' # PSSE ceļš datorā
+PSSE_PATH = r'C:\Program Files\PTI\PSSE35\35.3\PSSBIN'
 sys.path.append(PSSE_PATH)
 os.environ['PATH'] += ';' + PSSE_PATH
 import psse3503
@@ -33,6 +33,5 @@ if __name__ == "__main__":
     data_file = select_file()
     acc_data = data_file[0]
     pssexcel.accc(acc_data, ['s', 'e', 'v', 'b', 'l', 'g'], ratecon='a',  # export a summary
-                    xlsfile='Contingency_Report.xls', overwritesheet=True, show=False)  # export to this file
-
+                    xlsfile= 'Contingency_Report.xls', overwritesheet=True, show=False)  # export to this file
 
